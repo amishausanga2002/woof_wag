@@ -88,7 +88,7 @@
                     @if(is_array($items) && count($items))
                         <tr>
                             <td colspan="4" class="border px-4 py-3 bg-gray-50">
-                                <strong>Products in Order #{{ $order->id }}:</strong>
+                                <strong>Products in Order :</strong>
                                 <ul class="list-disc list-inside text-sm text-gray-700 mt-1">
                                     @foreach($items as $item)
                                         @php

@@ -96,6 +96,22 @@
             <textarea name="address" id="address" required rows="4"
                       class="w-full border border-gray-300 px-3 py-2 rounded shadow-sm focus:outline-none focus:ring focus:border-blue-500">{{ old('address') }}</textarea>
         </div>
+        <div>
+            <label class="block font-medium mb-1">Payment Method</label>
+            <div class="space-y-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="payment_method" value="Card on Delivery" required
+                           class="form-radio text-blue-600">
+                    <span class="ml-2">Card on Delivery</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="payment_method" value="Cash on Delivery" required
+                           class="form-radio text-blue-600">
+                    <span class="ml-2">Cash on Delivery</span>
+                </label>
+            </div>
+        </div>
+
 
         <div class="text-right">
             <button type="submit" class="bg-green-600 text-white font-semibold px-6 py-2 rounded hover:bg-green-700">

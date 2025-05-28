@@ -80,6 +80,7 @@ class CartController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'address' => 'required|string',
+            'payment_method' => 'required|string|in:Card on Delivery,Cash on Delivery', // ✅ Added
         ]);
 
         $total = array_sum(array_map(function($item) {
@@ -94,6 +95,7 @@ class CartController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'address' => $validated['address'],
+            'payment_method' => $validated['payment_method'], // ✅ Added
         ]);
 
         session()->forget('cart');
