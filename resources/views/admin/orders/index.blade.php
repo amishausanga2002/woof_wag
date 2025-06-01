@@ -71,14 +71,14 @@
 
                                     @if(is_array($items))
                                         @foreach($items as $item)
-                                            <li>{{ $item['name'] }} — ${{ $item['price'] }}</li>
+                                            <li>{{ $item['name'] }} — Rs.{{ $item['price'] }}</li>
                                         @endforeach
                                     @else
                                         <li>No items found</li>
                                     @endif
                                 </ul>
                             </td>
-                            <td class="border px-4 py-2">${{ $order->total }}</td>
+                            <td class="border px-4 py-2">Rs.{{ $order->total }}</td>
                             <td class="border px-4 py-2">{{ $order->status }}</td>
                             <td class="border px-4 py-2">
                                 <form action="{{ route('admin.orders.update', $order->id) }}" method="POST">

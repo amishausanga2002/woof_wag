@@ -43,13 +43,13 @@
     <ul class="space-y-1 list-disc list-inside text-gray-700">
         @foreach(json_decode($order->items, true) as $item)
             <li>
-                {{ $item['name'] }} (x{{ $item['quantity'] }}) - ${{ number_format($item['price'], 2) }}
+                {{ $item['name'] }} (x{{ $item['quantity'] }}) - Rs.{{ number_format($item['price'], 2) }}
             </li>
         @endforeach
     </ul>
 
     <div class="mt-6 text-xl font-bold text-right text-gray-900">
-        Total Paid: ${{ number_format($order->total, 2) }}
+        Total Paid: Rs.{{ number_format($order->total, 2) }}
     </div>
 
     <!-- Back to Shop Button -->
