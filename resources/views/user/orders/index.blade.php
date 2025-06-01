@@ -76,7 +76,7 @@
                     <tr>
                         <td class="border px-2 py-2 font-semibold">#{{ $order->id }}</td>
                         <td class="border px-2 py-2">{{ $order->status }}</td>
-                        <td class="border px-2 py-2">${{ number_format($order->total, 2) }}</td>
+                        <td class="border px-2 py-2">Rs.{{ number_format($order->total, 2) }}</td>
                         <td class="border px-2 py-2">{{ $order->created_at->format('Y-m-d') }}</td>
                     </tr>
 
@@ -98,7 +98,7 @@
                                             $subtotal = $price * $quantity;
                                         @endphp
                                         <li>
-                                            {{ $name }} — ${{ number_format($price, 2) }} × {{ $quantity }} = ${{ number_format($subtotal, 2) }}
+                                            {{ $name }} — ${{ number_format($price, 2) }} × {{ $quantity }} = Rs.{{ number_format($subtotal, 2) }}
                                         </li>
                                     @endforeach
                                 </ul>
