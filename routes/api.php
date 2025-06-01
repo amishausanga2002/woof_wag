@@ -1,34 +1,29 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
+use App\Http\Controllers\Api\ApiController;
+use App\Http\Controllers\Api\ProductController;
 
-Route::post('/sanctum/token', function (Request $request) {
-    $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-        'device_name' => 'required',
-    ]);
+// Public routes
+Route::post('/register', [ApiController::class, 'register']);
+Route::post('/login', [ApiController::class, 'login']);
 
-    $user = User::where('email', $request->email)->first();
+// Protected routes
+Route::middleware('auth:sanctum')->group(function () {
+    // User routes
+    Route::get('/user', [ApiController::class, 'user']);
+    Route::post('/logout', [ApiController::class, 'logout']);
 
-    if (! $user || ! Hash::check($request->password, $user->password)) {
-        throw ValidationException::withMessages([
-            'email' => ['The credentials are incorrect.'],
-        ]);
-    }
+    // Product routes - accessible by all authenticated users
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/products/{product}', [ProductController::class, 'show']);
 
-    return response()->json([
-        'token' => $user->createToken($request->device_name)->plainTextToken,
-        'role' => $user->role,
-    ]);
-
-
-});
-
-Route::middleware(['auth:sanctum', 'role:admin'])->get('/admin', function () {
-    return response()->json(['message' => 'Welcome Admin']);
+    // Admin only routes
+    Route::middleware('role:admin')->group(function () {
+        // Product management
+        Route::post('/products', [ProductController::class, 'store']);
+        Route::put('/products/{product}', [ProductController::class, 'update']);
+        Route::delete('/products/{product}', [ProductController::class, 'destroy']);
+    });
 });

@@ -84,9 +84,11 @@
                                 <form action="{{ route('admin.orders.update', $order->id) }}" method="POST">
                                     @csrf
                                     <select name="status" class="border border-gray-300 p-1 text-sm w-full mb-2">
-                                        <option value="Pending" {{ $order->status == 'Pending' ? 'selected' : '' }}>Pending</option>
                                         <option value="Processing" {{ $order->status == 'Processing' ? 'selected' : '' }}>Processing</option>
                                         <option value="Completed" {{ $order->status == 'Completed' ? 'selected' : '' }}>Completed</option>
+                                        <option value="Out for Delivery" {{ $order->status == 'Out for Delivery' ? 'selected' : '' }}>Out for Delivery</option>
+                                        <option value="Delivered" {{ $order->status == 'Delivered' ? 'selected' : '' }}>Delivered</option>
+                                        <option value="Cancelled" {{ $order->status == 'Cancelled' ? 'selected' : '' }}>Cancelled</option>
                                     </select>
                                     <button class="w-full bg-blue-600 text-white px-2 py-1 text-sm rounded hover:bg-blue-700">
                                         Update

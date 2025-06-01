@@ -109,8 +109,8 @@
                                     <button type="submit" class="text-blue-600 hover:underline text-sm">Update</button>
                                 </form>
                             </td>
-                            <td class="p-3 text-center">${{ number_format($item['price'], 2) }}</td>
-                            <td class="p-3 text-center">${{ number_format($subtotal, 2) }}</td>
+                            <td class="p-3 text-center">Rs.{{ number_format($item['price'], 2) }}</td>
+                            <td class="p-3 text-center">Rs.{{ number_format($subtotal, 2) }}</td>
                             <td class="p-3 text-center">
                                 <form action="{{ route('cart.remove', $id) }}" method="POST">
                                     @csrf
@@ -125,7 +125,7 @@
 
         <!-- Total -->
         <div class="text-right text-xl font-bold mt-6">
-            Total: ${{ number_format($total, 2) }}
+            Total: Rs.{{ number_format($total, 2) }}
         </div>
 
         <!-- Checkout Button -->

@@ -37,7 +37,7 @@
                     <th class="py-3 px-4 border-b">Name</th>
                     <th class="py-3 px-4 border-b">Description</th>
                     <th class="py-3 px-4 border-b">Price</th>
-                    <th class="py-3 px-4 border-b">Image</th>
+                    <th class="py-3 px-4 border-b">Images</th>
                     <th class="py-3 px-4 border-b">Actions</th>
                 </tr>
             </thead>
@@ -46,7 +46,7 @@
                     <tr class="hover:bg-gray-50">
                         <td class="py-2 px-4 border-b">{{ $product->name }}</td>
                         <td class="py-2 px-4 border-b">{{ $product->description }}</td>
-                        <td class="py-2 px-4 border-b">${{ number_format($product->price, 2) }}</td>
+                        <td class="py-2 px-4 border-b">Rs.{{ number_format($product->price, 2) }}</td>
                         <td class="py-2 px-4 border-b">
                             <img src="{{ asset('storage/' . $product->image) }}" alt="Product" class="w-16 h-16 object-cover rounded">
                         </td>

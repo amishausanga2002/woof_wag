@@ -106,7 +106,7 @@
 
                 <h2 class="text-lg font-bold mb-1">{{ $product->name }}</h2>
                 <p class="text-sm text-gray-700 mb-2">{{ $product->description }}</p>
-                <p class="text-green-700 font-bold mb-2">${{ $product->price }}</p>
+                <p class="text-green-700 font-bold mb-2">Rs.{{ $product->price }}</p>
 
                 <form action="{{ route('cart.add', $product->id) }}" method="POST">
                     @csrf
