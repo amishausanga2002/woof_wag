@@ -85,7 +85,7 @@
 <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
     <!-- Vet Card -->
     <div class="bg-white bg-opacity-90 rounded-lg shadow text-black hover:shadow-lg transition">
-        <img src="/Images/vet.jpg" alt="Vet Booking" class="w-full h-48 object-cover rounded-t-lg">
+        <img src="/images/vet.jpg" alt="Vet Booking" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Vet Checkup</h3>
             <p class="text-sm text-gray-700">Professional vet care for your pet’s health and wellness.</p>
@@ -95,7 +95,7 @@
 
     <!-- Grooming Card -->
     <div class="bg-white bg-opacity-90 rounded-lg shadow text-black hover:shadow-lg transition">
-        <img src="/Images/grooming.jpg" alt="Grooming" class="w-full h-48 object-cover rounded-t-lg">
+        <img src="/images/grooming.jpg" alt="Grooming" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Pet Grooming</h3>
             <p class="text-sm text-gray-700">Full grooming with bath, styling, nail trimming and more.</p>

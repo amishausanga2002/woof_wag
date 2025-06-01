@@ -121,7 +121,7 @@
             <!-- Product 1 -->
             <div class="col-md-4">
                 <div class="card shadow-md hover:shadow-lg transition duration-300 h-100">
-                    <img src="/Images/dogleash.jpg" class="card-img-top" alt="Product">
+                    <img src="/images/dogleash.jpg" class="card-img-top" alt="Product">
                     <div class="card-body">
                         <h5 class="card-title">Dog Leash</h5>
                         <p class="card-text">Strong and stylish leash for everyday walks.</p>
@@ -132,7 +132,7 @@
             <!-- Product 2 -->
             <div class="col-md-4">
                 <div class="card shadow-md hover:shadow-lg transition duration-300 h-100">
-                    <img src="/Images/cat_toy.jpg" class="card-img-top" alt="Product">
+                    <img src="/images/cat_toy.jpg" class="card-img-top" alt="Product">
                     <div class="card-body">
                         <h5 class="card-title">Cat Toy</h5>
                         <p class="card-text">Fun interactive toy for your feline friend.</p>
@@ -143,7 +143,7 @@
             <!-- Product 3 -->
             <div class="col-md-4">
                 <div class="card shadow-md hover:shadow-lg transition duration-300 h-100">
-                    <img src="/Images/shampoo.jpg" class="card-img-top" alt="Product">
+                    <img src="/images/shampoo.jpg" class="card-img-top" alt="Product">
                     <div class="card-body">
                         <h5 class="card-title">Pet Shampoo</h5>
                         <p class="card-text">Keep your pets clean and fresh with natural ingredients.</p>
