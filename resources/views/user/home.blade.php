@@ -184,7 +184,7 @@
         <div>
             <h4 class="text-white font-semibold mb-2">Contact Us</h4>
             <ul class="space-y-2">
-                <li>Email: woofwag@example.com</li>
+                <li>Email: woofwag@gmail.com</li>
                 <li>Phone: +94 77 123 4567</li>
                 <li>Address: 123, Pet Street, Colombo, Sri Lanka</li>
             </ul>

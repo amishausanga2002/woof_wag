@@ -174,6 +174,7 @@
             <ul class="space-y-2">
                 <li><a href="{{ route('user.home') }}" class="hover:text-blue-400">Home</a></li>
                 <li><a href="{{ route('user.shopnow') }}" class="hover:text-blue-400">Shop</a></li>
+                <li><a href="{{ route('user.services') }}" class="hover:text-blue-400">Our Services</a></li>
 
             </ul>
         </div>
@@ -181,7 +182,7 @@
         <div>
             <h4 class="text-white font-semibold mb-2">Contact Us</h4>
             <ul class="space-y-2">
-                <li>Email: woofwag@example.com</li>
+                <li>Email: woofwag@gmail.com</li>
                 <li>Phone: +94 77 123 4567</li>
                 <li>Address: 123, Pet Street, Colombo, Sri Lanka</li>
             </ul>
