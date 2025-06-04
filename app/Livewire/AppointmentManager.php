@@ -52,30 +52,33 @@ class AppointmentManager extends Component
     }
 
     public function update()
-{
-    $this->validate([
-        'editPetName' => 'required|string|max:255',
-        'editDate' => [
-            'required',
-            'date',
-            'after_or_equal:today',
-            'before_or_equal:' . now()->addDays(7)->toDateString(),
-        ],
-        'editTime' => 'required',
-        'editNotes' => 'nullable|string',
-    ]);
+    {
+        $this->validate([
+            'editPetName' => 'required|string|max:255',
+            'editDate' => [
+                'required',
+                'date',
+                'after_or_equal:today',
+                'before_or_equal:' . now()->addDays(7)->toDateString(),
+            ],
+            'editTime' => 'required',
+            'editNotes' => 'nullable|string',
+        ]);
 
-    $appointment = Service::findOrFail($this->editId);
-    $appointment->update([
-        'pet_name' => $this->editPetName,
-        'preferred_date' => $this->editDate,
-        'preferred_time' => $this->editTime,
-        'notes' => $this->editNotes,
-    ]);
+        $appointment = Service::findOrFail($this->editId);
+        $appointment->update([
+            'pet_name' => $this->editPetName,
+            'preferred_date' => $this->editDate,
+            'preferred_time' => $this->editTime,
+            'notes' => $this->editNotes,
+        ]);
 
-    session()->flash('success', 'Appointment updated successfully.');
-    $this->resetEditFields();
-}
+        session()->flash('success', 'Appointment updated successfully.');
+
+        $this->resetEditFields();
+        $this->loadAppointments(); // ✅ This line forces Livewire to refresh the updated appointment list
+    }
+
 
 
     public function resetEditFields()

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Font Awesome -->
@@ -41,10 +42,7 @@
     <!-- ✅ NAVBAR -->
     <nav class="bg-white bg-opacity-90 shadow-md text-black px-4 sm:px-8 py-4 flex justify-between items-center">
         <a href="{{ route('admin') }}" class="text-2xl font-bold text-blue-600">WoofWag</a>
-        {{-- <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button type="submit" class="text-red-600 hover:text-red-700 text-sm font-semibold">Logout</button>
-        </form> --}}
+
     </nav>
 
     <!-- ✅ Main Content -->

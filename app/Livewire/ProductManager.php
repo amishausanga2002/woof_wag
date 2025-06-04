@@ -10,19 +10,8 @@ class ProductManager extends Component
 {
     use WithFileUploads;
 
-    public $products;
     public $name, $description, $price, $image, $product_id;
     public $isEdit = false;
-
-    public function mount()
-    {
-        $this->loadProducts();
-    }
-
-    public function loadProducts()
-    {
-        $this->products = Product::all();
-    }
 
     public function resetForm()
     {
@@ -32,6 +21,17 @@ class ProductManager extends Component
         $this->image = null;
         $this->product_id = null;
         $this->isEdit = false;
+
+        $this->dispatch('clearFileInput');
+    }
+
+    public function submitForm()
+    {
+        if ($this->isEdit) {
+            $this->update();
+        } else {
+            $this->save();
+        }
     }
 
     public function save()
@@ -52,9 +52,8 @@ class ProductManager extends Component
             'image' => $imagePath,
         ]);
 
-        session()->flash('success', 'Product added successfully.');
+        session()->flash('message', 'Product added successfully.');
         $this->resetForm();
-        $this->loadProducts();
     }
 
     public function edit($id)
@@ -78,32 +77,32 @@ class ProductManager extends Component
 
         $product = Product::findOrFail($this->product_id);
 
-        if ($this->image) {
-            $imagePath = $this->image->store('products', 'public');
-            $product->image = $imagePath;
-        }
-
-        $product->update([
+        $data = [
             'name' => $this->name,
             'description' => $this->description,
             'price' => $this->price,
-            'image' => $product->image,
-        ]);
+        ];
 
-        session()->flash('success', 'Product updated.');
+        if ($this->image) {
+            $data['image'] = $this->image->store('products', 'public');
+        }
+
+        $product->update($data);
+
+        session()->flash('message', 'Product updated successfully.');
         $this->resetForm();
-        $this->loadProducts();
     }
 
     public function delete($id)
     {
         Product::findOrFail($id)->delete();
-        session()->flash('success', 'Product deleted.');
-        $this->loadProducts();
+        session()->flash('message', 'Product deleted.');
     }
 
     public function render()
     {
-        return view('livewire.product-manager');
+        return view('livewire.product-manager', [
+            'products' => Product::all(),
+        ]);
     }
 }

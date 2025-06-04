@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>WoofWag - User Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    @livewireStyles
 
     <!-- Background Styling -->
     <style>
@@ -40,8 +42,6 @@
     <a href="{{ route('user.home') }}" class="text-2xl font-bold text-blue-600">WoofWag</a>
 
     <div class="flex items-center gap-6 text-sm font-medium">
-
-
         <!-- Logout -->
         <form method="POST" action="{{ route('logout') }}">
             @csrf
@@ -49,16 +49,17 @@
         </form>
     </div>
 </nav>
+
 <br><br><br><br>
-<body class="text-white">
 
-    <div class="max-w-5xl mx-auto px-6 py-10 bg-white bg-opacity-90 rounded shadow text-black">
-        <h1 class="text-3xl font-bold mb-6 text-center">📅 Appointment Manager</h1>
+<div class="max-w-5xl mx-auto px-6 py-10 bg-white bg-opacity-90 rounded shadow text-black">
+    <h1 class="text-3xl font-bold mb-6 text-center">📅 Appointment Manager</h1>
 
-        <!-- ✅ Livewire Component -->
-        @livewire('appointment-manager')
-    </div>
-    <!-- Back to Dashboard Button -->
+    <!-- ✅ Livewire Component -->
+    @livewire('appointment-manager')
+</div>
+
+<!-- Back to Dashboard Button -->
 <div class="text-center mt-8">
     <a href="{{ route('dashboard') }}">
         <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow">
@@ -66,6 +67,7 @@
         </button>
     </a>
 </div>
-    @livewireScripts
+
+@livewireScripts
 </body>
 </html>
