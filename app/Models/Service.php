@@ -11,7 +11,7 @@ class Service extends Model
         'type',
         'pet_name',
         'preferred_date',
-        'preferred_time', 
+        'preferred_time',
         'notes',
     ];
     public function user()

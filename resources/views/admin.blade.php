@@ -45,7 +45,7 @@
 
     </nav>
 
-    
+
     <main class="flex flex-col items-center justify-center min-h-screen px-6">
         <h1 class="text-4xl font-bold mb-10">Admin Dashboard</h1>
 

@@ -82,7 +82,7 @@
             </div>
         </a>
 
-        
+
         <a href="{{ route('appointments.index') }}">
             <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow hover:shadow-lg text-black text-center">
                 <h3 class="text-xl font-bold mb-2">📅 My Appointments</h3>

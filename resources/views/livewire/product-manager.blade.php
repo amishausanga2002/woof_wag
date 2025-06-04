@@ -15,7 +15,7 @@
 
     <div class="space-y-6">
         <form wire:submit.prevent="submitForm">
-            
+
             <input type="text" wire:model.defer="name" placeholder="Product Name"
                 class="border border-gray-300 px-4 py-2 rounded w-full mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
             @error('name') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror

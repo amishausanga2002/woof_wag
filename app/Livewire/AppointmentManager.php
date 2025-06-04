@@ -76,7 +76,7 @@ class AppointmentManager extends Component
         session()->flash('success', 'Appointment updated successfully.');
 
         $this->resetEditFields();
-        $this->loadAppointments(); 
+        $this->loadAppointments();
     }
 
 

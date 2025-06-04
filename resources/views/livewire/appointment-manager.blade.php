@@ -43,7 +43,7 @@
         <p class="text-gray-600">You have no appointments yet.</p>
     @endif
 
-    
+
     @if ($editId)
         <div class="bg-white p-4 border border-gray-300 rounded shadow-md">
             <h3 class="text-lg font-semibold mb-3">Edit Appointment</h3>

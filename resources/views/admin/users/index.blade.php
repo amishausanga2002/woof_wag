@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url('/images/hero.jpg'); 
+            background-image: url('/images/hero.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

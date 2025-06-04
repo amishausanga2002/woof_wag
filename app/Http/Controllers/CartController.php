@@ -80,7 +80,7 @@ class CartController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'address' => 'required|string',
-            'payment_method' => 'required|string|in:Card on Delivery,Cash on Delivery', 
+            'payment_method' => 'required|string|in:Card on Delivery,Cash on Delivery',
         ]);
 
         $total = array_sum(array_map(function($item) {
