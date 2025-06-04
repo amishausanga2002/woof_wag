@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-image: url('/images/hero.jpg'); /* Update this path if needed */
+            background-image: url('/images/hero.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

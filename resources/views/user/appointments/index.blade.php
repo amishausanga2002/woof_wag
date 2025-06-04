@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     @livewireStyles
 
-    <!-- Background Styling -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -37,12 +37,12 @@
 
 <body class="text-white">
 
-<!-- ✅ NAVBAR -->
+
 <nav class="bg-white bg-opacity-90 shadow-md text-black px-4 sm:px-8 py-4 flex justify-between items-center">
     <a href="{{ route('user.home') }}" class="text-2xl font-bold text-blue-600">WoofWag</a>
 
     <div class="flex items-center gap-6 text-sm font-medium">
-        <!-- Logout -->
+
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="text-red-600 hover:text-red-700 text-sm font-semibold">Logout</button>
@@ -55,11 +55,11 @@
 <div class="max-w-5xl mx-auto px-6 py-10 bg-white bg-opacity-90 rounded shadow text-black">
     <h1 class="text-3xl font-bold mb-6 text-center">📅 Appointment Manager</h1>
 
-    <!-- ✅ Livewire Component -->
+
     @livewire('appointment-manager')
 </div>
 
-<!-- Back to Dashboard Button -->
+
 <div class="text-center mt-8">
     <a href="{{ route('dashboard') }}">
         <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded shadow">

@@ -5,20 +5,20 @@
     <title>WoofWag - Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Bootstrap 5 -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Font Awesome -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Google Font -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -46,7 +46,7 @@
 
 <body class="text-white">
 
-<!-- NAVBAR -->
+
 <nav class="bg-white bg-opacity-90 border-b border-gray-200 shadow-md text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -87,13 +87,13 @@
     </div>
 </nav>
 
-<!-- PAGE HEADER -->
+
 <header class="text-center py-12">
     <h1 class="text-5xl font-bold">🛍️ Shop Now</h1>
     <p class="mt-4 text-lg text-white">Explore our best-selling pet products</p>
 </header>
 
-<!-- PRODUCTS SECTION -->
+
 <div class="max-w-7xl mx-auto p-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         @forelse($products as $product)
@@ -121,17 +121,17 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+
 <footer class="bg-black bg-opacity-60 py-6 mt-10 text-white">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-        <!-- Newsletter -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Newsletter</h4>
             <p>Stay updated with our latest updates and offers</p>
             <input type="email" placeholder="Enter your email" class="mt-2 p-2 rounded-lg w-full text-black">
             <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">SUBSCRIBE</button>
         </div>
-        <!-- Quick Links -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Quick Links</h4>
             <ul class="space-y-2">
@@ -141,7 +141,7 @@
 
             </ul>
         </div>
-        <!-- Contact Info -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Contact Us</h4>
             <ul class="space-y-2">
@@ -153,7 +153,7 @@
     </div>
 </footer>
 
-<!-- Script -->
+
 <script>
     function toggleMenu() {
         const menu = document.getElementById('mobileMenu');

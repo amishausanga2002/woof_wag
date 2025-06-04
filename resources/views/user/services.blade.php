@@ -8,14 +8,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Bootstrap -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Font Awesome -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Background Image and Font -->
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -43,7 +43,7 @@
 </head>
 <body class="text-white">
 
-<!-- NAVBAR -->
+
 <nav class="bg-white bg-opacity-90 border-b border-gray-200 shadow-md text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -76,15 +76,15 @@
     </div>
 </nav>
 
-<!-- HERO SECTION -->
+
 <header class="text-center py-12">
     <h1 class="text-4xl font-bold text-white">🐾 Our Services</h1>
     <p class="mt-2 text-lg text-white">Providing the best care and support for your pets</p>
 </header>
 
-<!-- SERVICE CARDS -->
+
 <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-    <!-- Vet Card -->
+
     <div class="bg-white bg-opacity-90 rounded-lg shadow text-black hover:shadow-lg transition">
         <img src="/images/vet.jpg" alt="Vet Booking" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
@@ -94,7 +94,7 @@
         </div>
     </div>
 
-    <!-- Grooming Card -->
+
     <div class="bg-white bg-opacity-90 rounded-lg shadow text-black hover:shadow-lg transition">
         <img src="/images/grooming.jpg" alt="Grooming" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-4">
@@ -105,7 +105,7 @@
     </div>
 </div>
 
-<!-- BOOKING FORM -->
+
 <div class="max-w-3xl mx-auto p-6 bg-white bg-opacity-90 rounded shadow text-black hidden" id="serviceFormWrapper">
     <h2 class="text-2xl font-bold mb-4">Book a Service</h2>
 
@@ -117,12 +117,12 @@
 
     @php
     $today = now()->toDateString();
-    $maxDate = now()->addDays(7)->toDateString(); // Only next 7 days
+    $maxDate = now()->addDays(7)->toDateString();
 @endphp
 
 <form method="POST" action="{{ route('services.store') }}" id="serviceForm" class="space-y-4">
     @csrf
-    <input type="hidden" name="type" id="type"> {{-- JavaScript will set this --}}
+    <input type="hidden" name="type" id="type">
 
     <div>
         <label class="block font-medium mb-1">Pet Name:</label>
@@ -159,17 +159,17 @@
 
 </div>
 
-<!-- FOOTER -->
+
 <footer class="bg-black bg-opacity-60 py-6 mt-10 text-white">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-        <!-- Newsletter -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Newsletter</h4>
             <p>Stay updated with our latest updates and offers</p>
             <input type="email" placeholder="Enter your email" class="mt-2 p-2 rounded-lg w-full text-black">
             <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">SUBSCRIBE</button>
         </div>
-        <!-- Quick Links -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Quick Links</h4>
             <ul class="space-y-2">
@@ -179,7 +179,7 @@
 
             </ul>
         </div>
-        <!-- Contact Info -->
+
         <div>
             <h4 class="text-white font-semibold mb-2">Contact Us</h4>
             <ul class="space-y-2">
@@ -191,7 +191,7 @@
     </div>
 </footer>
 
-<!-- Scripts -->
+
 <script>
     function toggleMenu() {
         const menu = document.getElementById('mobileMenu');

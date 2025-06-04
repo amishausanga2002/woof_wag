@@ -57,7 +57,7 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Item removed!');
     }
 
-    // Show checkout form
+
     public function showCheckoutForm()
     {
         $cart = session()->get('cart', []);
@@ -68,7 +68,7 @@ class CartController extends Controller
         return view('user.checkout');
     }
 
-    // Process checkout and save order
+
     public function processCheckout(Request $request)
     {
         $cart = session()->get('cart', []);
@@ -80,7 +80,7 @@ class CartController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'address' => 'required|string',
-            'payment_method' => 'required|string|in:Card on Delivery,Cash on Delivery', // ✅ Added
+            'payment_method' => 'required|string|in:Card on Delivery,Cash on Delivery', 
         ]);
 
         $total = array_sum(array_map(function($item) {
@@ -95,7 +95,7 @@ class CartController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'address' => $validated['address'],
-            'payment_method' => $validated['payment_method'], // ✅ Added
+            'payment_method' => $validated['payment_method'],
         ]);
 
         session()->forget('cart');

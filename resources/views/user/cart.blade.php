@@ -8,7 +8,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Custom Background Style -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -36,7 +36,7 @@
 
 <body class="text-white">
 
-<!-- ✅ NAVBAR -->
+
 <nav class="bg-white bg-opacity-90 border-b border-gray-200 shadow-md text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -61,7 +61,7 @@
     </div>
 </nav>
 
-<!-- ✅ CART CONTENT -->
+
 <div class="max-w-5xl mx-auto p-6 bg-white bg-opacity-90 rounded shadow mt-10 text-black">
     <h1 class="text-3xl font-bold mb-6 text-center text-black">🛒 Your Cart</h1>
 
@@ -120,12 +120,12 @@
             </table>
         </div>
 
-        <!-- Total -->
+
         <div class="text-right text-xl font-bold mt-6">
             Total: Rs.{{ number_format($total, 2) }}
         </div>
 
-        <!-- Checkout Button -->
+
         <div class="text-right mt-4">
             <a href="{{ route('user.shopnow') }}" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded">
                 Shop more
@@ -144,7 +144,7 @@
 </div>
 <br><br><br><br><br><br><br>
 
-<!-- ✅ FOOTER -->
+
 <footer class="bg-black bg-opacity-60 py-6 mt-10 text-white">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
         <div>

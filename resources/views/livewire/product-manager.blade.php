@@ -15,27 +15,27 @@
 
     <div class="space-y-6">
         <form wire:submit.prevent="submitForm">
-            <!-- Product Name -->
+            
             <input type="text" wire:model.defer="name" placeholder="Product Name"
                 class="border border-gray-300 px-4 py-2 rounded w-full mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
             @error('name') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
-            <!-- Description -->
+
             <textarea wire:model.defer="description" placeholder="Description"
                 class="border border-gray-300 px-4 py-2 rounded w-full mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
             @error('description') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
-            <!-- Price -->
+
             <input type="text" wire:model.defer="price" placeholder="Price"
                 class="border border-gray-300 px-4 py-2 rounded w-full mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
             @error('price') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
-            <!-- Image -->
+
             <input type="file" wire:model="image" id="imageInput"
                 class="border border-gray-300 px-4 py-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
             @error('image') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
-            <!-- Buttons -->
+
             <div class="flex items-center">
                 @if($isEdit)
                     <button type="submit"
@@ -56,7 +56,7 @@
         </form>
     </div>
 
-    <!-- Product Table -->
+
     <div class="mt-8 overflow-x-auto bg-white border border-gray-300 rounded-lg shadow-md">
         <table class="w-full text-sm text-left">
             <thead class="bg-gray-100">
@@ -101,7 +101,7 @@
         </a>
     </center>
 
-    <!-- Reset file input after form reset -->
+
     <script>
         Livewire.on('clearFileInput', () => {
             const input = document.getElementById('imageInput');

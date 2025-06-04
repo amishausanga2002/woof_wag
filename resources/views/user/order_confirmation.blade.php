@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Background styling -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -53,7 +53,7 @@
         Total Paid: Rs.{{ number_format($order->total, 2) }}
     </div>
 
-    <!-- Back to Shop Button -->
+    
     <div class="mt-8 text-center">
         <a href="{{ route('user.shopnow') }}">
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow">

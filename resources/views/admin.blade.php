@@ -5,11 +5,11 @@
     <title>WoofWag - Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Font Awesome -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -39,13 +39,13 @@
 
 <body class="text-white">
 
-    <!-- ✅ NAVBAR -->
+
     <nav class="bg-white bg-opacity-90 shadow-md text-black px-4 sm:px-8 py-4 flex justify-between items-center">
         <a href="{{ route('admin') }}" class="text-2xl font-bold text-blue-600">WoofWag</a>
 
     </nav>
 
-    <!-- ✅ Main Content -->
+    
     <main class="flex flex-col items-center justify-center min-h-screen px-6">
         <h1 class="text-4xl font-bold mb-10">Admin Dashboard</h1>
 

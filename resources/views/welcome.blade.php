@@ -32,7 +32,7 @@
 </head>
 <body class="text-white h-screen w-full flex flex-col">
 
-    <!-- Top Right Navigation -->
+
     <nav class="flex justify-end p-6">
         @auth
             <a
@@ -61,7 +61,7 @@
         @endauth
     </nav>
 
-    <!-- Centered Heading -->
+    
     <div class="flex-grow flex flex-col items-center justify-center text-center -translate-y-10">
         <h1 class="text-5xl font-bold tracking-wide mb-2">Welcome to WoofWag</h1>
         <p class="text-xl text-white opacity-90">Bringing Joy to Every Pawstep.</p>

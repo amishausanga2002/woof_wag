@@ -24,7 +24,7 @@ class ApiController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 2  // 2 represents regular user
+            'role' => 2  
         ]);
 
         return response()->json([

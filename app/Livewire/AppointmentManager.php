@@ -76,7 +76,7 @@ class AppointmentManager extends Component
         session()->flash('success', 'Appointment updated successfully.');
 
         $this->resetEditFields();
-        $this->loadAppointments(); // ✅ This line forces Livewire to refresh the updated appointment list
+        $this->loadAppointments(); 
     }
 
 
